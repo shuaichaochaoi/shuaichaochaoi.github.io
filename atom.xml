@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>歪？我剑呢</title>
+  <title>chaochoa&#39;blog</title>
   
-  
+  <subtitle>chaochao&#39;blog</subtitle>
   <link href="http://shuaichaochaoi.github.io/atom.xml" rel="self"/>
   
   <link href="http://shuaichaochaoi.github.io/"/>
@@ -10,7 +10,7 @@
   <id>http://shuaichaochaoi.github.io/</id>
   
   <author>
-    <name>歪？我剑呢</name>
+    <name>帅超超i</name>
     
   </author>
   
