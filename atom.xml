@@ -6,7 +6,7 @@
   <link href="http://shuaichaochaoi.github.io/atom.xml" rel="self"/>
   
   <link href="http://shuaichaochaoi.github.io/"/>
-  <updated>2020-09-20T11:21:46.556Z</updated>
+  <updated>2020-09-27T11:09:16.938Z</updated>
   <id>http://shuaichaochaoi.github.io/</id>
   
   <author>
@@ -17,23 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://shuaichaochaoi.github.io/2020/09/20/hello-world/"/>
-    <id>http://shuaichaochaoi.github.io/2020/09/20/hello-world/</id>
-    <published>2020-09-20T11:21:46.555Z</published>
-    <updated>2020-09-20T11:21:46.556Z</updated>
+    <title>SQL Server基本的代码操作</title>
+    <link href="http://shuaichaochaoi.github.io/2020/09/27/sql-server-ji-ben-de-dai-ma-cao-zuo/"/>
+    <id>http://shuaichaochaoi.github.io/2020/09/27/sql-server-ji-ben-de-dai-ma-cao-zuo/</id>
+    <published>2020-09-27T11:03:06.000Z</published>
+    <updated>2020-09-27T11:09:16.938Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;SQL-Server基本的代码操作&quot;&gt;&lt;a href=&quot;#SQL-Server基本的代码操作&quot; class=&quot;headerlink&quot; title=&quot;SQL Server基本的代码操作&quot;&gt;&lt;/a&gt;SQL Server基本的代码操作&lt;/h1&gt;&lt;h2</summary>
         
       
     
     
     
+    
+    <category term="SQL Sever" scheme="http://shuaichaochaoi.github.io/tags/SQL-Sever/"/>
     
   </entry>
   
