@@ -6,7 +6,7 @@
   <link href="http://shuaichaochaoi.github.io/atom.xml" rel="self"/>
   
   <link href="http://shuaichaochaoi.github.io/"/>
-  <updated>2020-09-27T11:45:50.105Z</updated>
+  <updated>2020-10-19T11:28:23.867Z</updated>
   <id>http://shuaichaochaoi.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SQL Server实验四 数据查询（一）</title>
+    <link href="http://shuaichaochaoi.github.io/2020/10/19/sql-sever-shi-yan-si-shu-ju-cha-xun-yi/"/>
+    <id>http://shuaichaochaoi.github.io/2020/10/19/sql-sever-shi-yan-si-shu-ju-cha-xun-yi/</id>
+    <published>2020-10-19T11:27:24.000Z</published>
+    <updated>2020-10-19T11:28:23.867Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本实验基于StoreSales数据库中的各个表，用T-SQL命令按要求完成下列查询，并给出正确执行后的结果截图。&lt;br&gt;1、查询Employee中所有员工的员工号、姓名、地址和部门号。&lt;/p&gt;
+&lt;pre class=&quot; language-javascript&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    
+    <category term="SQL Sever" scheme="http://shuaichaochaoi.github.io/tags/SQL-Sever/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SQL Server基本的代码操作</title>
     <link href="http://shuaichaochaoi.github.io/2020/09/27/sql-server-ji-ben-de-dai-ma-cao-zuo/"/>
     <id>http://shuaichaochaoi.github.io/2020/09/27/sql-server-ji-ben-de-dai-ma-cao-zuo/</id>
     <published>2020-09-27T11:03:06.000Z</published>
-    <updated>2020-09-27T11:45:50.105Z</updated>
+    <updated>2020-10-18T10:02:52.067Z</updated>
     
     
       
