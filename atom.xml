@@ -6,7 +6,7 @@
   <link href="http://shuaichaochaoi.github.io/atom.xml" rel="self"/>
   
   <link href="http://shuaichaochaoi.github.io/"/>
-  <updated>2020-10-19T12:36:23.168Z</updated>
+  <updated>2020-10-20T13:04:40.810Z</updated>
   <id>http://shuaichaochaoi.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SQL Server 实验六  索引和视图</title>
+    <link href="http://shuaichaochaoi.github.io/2020/10/20/sql-server-shi-yan-liu-suo-yin-he-shi-tu/"/>
+    <id>http://shuaichaochaoi.github.io/2020/10/20/sql-server-shi-yan-liu-suo-yin-he-shi-tu/</id>
+    <published>2020-10-20T13:03:04.000Z</published>
+    <updated>2020-10-20T13:04:40.810Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本实验基于StoreSales数据库中的各个表，用T-SQL命令完成下面要求。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;一、索引的使用&quot;&gt;&lt;a href=&quot;#一、索引的使用&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="SQL Server" scheme="http://shuaichaochaoi.github.io/tags/SQL-Server/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SQL Server实验五 数据查询（二）</title>
-    <link href="http://shuaichaochaoi.github.io/2020/10/19/sql-sever-shi-yan-wu-shu-ju-cha-xun-er/"/>
-    <id>http://shuaichaochaoi.github.io/2020/10/19/sql-sever-shi-yan-wu-shu-ju-cha-xun-er/</id>
+    <link href="http://shuaichaochaoi.github.io/2020/10/19/sql-server-shi-yan-wu-shu-ju-cha-xun-er/"/>
+    <id>http://shuaichaochaoi.github.io/2020/10/19/sql-server-shi-yan-wu-shu-ju-cha-xun-er/</id>
     <published>2020-10-19T11:35:31.000Z</published>
-    <updated>2020-10-19T12:36:23.168Z</updated>
+    <updated>2020-10-20T12:43:34.276Z</updated>
     
     
       
@@ -39,16 +65,16 @@
     
     
     
-    <category term="SQL Sever" scheme="http://shuaichaochaoi.github.io/tags/SQL-Sever/"/>
+    <category term="SQL Server" scheme="http://shuaichaochaoi.github.io/tags/SQL-Server/"/>
     
   </entry>
   
   <entry>
     <title>SQL Server实验四 数据查询（一）</title>
-    <link href="http://shuaichaochaoi.github.io/2020/10/19/sql-sever-shi-yan-si-shu-ju-cha-xun-yi/"/>
-    <id>http://shuaichaochaoi.github.io/2020/10/19/sql-sever-shi-yan-si-shu-ju-cha-xun-yi/</id>
+    <link href="http://shuaichaochaoi.github.io/2020/10/19/sql-server-shi-yan-si-shu-ju-cha-xun-yi/"/>
+    <id>http://shuaichaochaoi.github.io/2020/10/19/sql-server-shi-yan-si-shu-ju-cha-xun-yi/</id>
     <published>2020-10-19T11:27:24.000Z</published>
-    <updated>2020-10-19T12:09:26.532Z</updated>
+    <updated>2020-10-20T12:43:34.270Z</updated>
     
     
       
@@ -63,7 +89,7 @@
     
     
     
-    <category term="SQL Sever" scheme="http://shuaichaochaoi.github.io/tags/SQL-Sever/"/>
+    <category term="SQL Server" scheme="http://shuaichaochaoi.github.io/tags/SQL-Server/"/>
     
   </entry>
   
@@ -72,7 +98,7 @@
     <link href="http://shuaichaochaoi.github.io/2020/09/27/sql-server-ji-ben-de-dai-ma-cao-zuo/"/>
     <id>http://shuaichaochaoi.github.io/2020/09/27/sql-server-ji-ben-de-dai-ma-cao-zuo/</id>
     <published>2020-09-27T11:03:06.000Z</published>
-    <updated>2020-10-18T10:02:52.067Z</updated>
+    <updated>2020-10-20T12:43:34.283Z</updated>
     
     
       
@@ -86,7 +112,7 @@
     
     
     
-    <category term="SQL Sever" scheme="http://shuaichaochaoi.github.io/tags/SQL-Sever/"/>
+    <category term="SQL Server" scheme="http://shuaichaochaoi.github.io/tags/SQL-Server/"/>
     
   </entry>
   

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SQL Server实验五 数据查询（二）, HTML, CSS, JavaScript, JQuery, React, Vue.js">
+    <meta name="keywords" content="SQL Server 实验六  索引和视图, HTML, CSS, JavaScript, JQuery, React, Vue.js">
     <meta name="description" content="记录知识，记录成长。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SQL Server实验五 数据查询（二） | chaochao&#39;blog</title>
+    <title>SQL Server 实验六  索引和视图 | chaochao&#39;blog</title>
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/shuaichaochaoi/shuaichaochaoi.github.io/medias/KDQS.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shuaichaochaoi/shuaichaochaoi.github.io/libs/awesome/css/all.css">
@@ -456,12 +456,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SQL Server实验五 数据查询（二）</h1>
+                    <h1 class="description center-align post-title">SQL Server 实验六  索引和视图</h1>
                 </div>
             </div>
         </div>
@@ -578,8 +578,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SQL-Sever/">
-                                <span class="chip bg-color">SQL Sever</span>
+                            <a href="/tags/SQL-Server/">
+                                <span class="chip bg-color">SQL Server</span>
                             </a>
                         
                     </div>
@@ -594,28 +594,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-19
+                    2020-10-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-19
+                    2020-10-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    425
+                    421
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -631,72 +631,43 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>本实验基于StoreSales数据库中的各个表，用T-SQL命令按要求完成下列查询。</p>
+<p>本实验基于StoreSales数据库中的各个表，用T-SQL命令完成下面要求。</p>
 </blockquote>
-<p>1、查询员工孙勇诚订单总金额。（三种方法可选择：谓词连接、JOIN连接、IN子查询）</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//谓词连接查询</span>
-SELECT Cost <span class="token keyword">as</span> <span class="token string">'总金额'</span>
-FROM Employee<span class="token punctuation">,</span>SalesOrder
-WHERE Employee<span class="token punctuation">.</span> EmplName<span class="token operator">=</span><span class="token string">'孙勇诚'</span> and Employee<span class="token punctuation">.</span>EmplID<span class="token operator">=</span>SalesOrder<span class="token punctuation">.</span>EmplID
-<span class="token comment" spellcheck="true">//JOIN连接查询</span>
-SELECT Cost <span class="token keyword">as</span> <span class="token string">'总金额'</span>
-FROM Employee join SalesOrder
-ON Employee<span class="token punctuation">.</span>EmplName<span class="token operator">=</span><span class="token string">'孙勇诚'</span> and Employee<span class="token punctuation">.</span>EmplID<span class="token operator">=</span>SalesOrder<span class="token punctuation">.</span>EmplID
-<span class="token comment" spellcheck="true">//IN子查询</span>
-SELECT Cost <span class="token keyword">as</span> <span class="token string">'总金额'</span>
-FROM SalesOrder
-WHERE EmplID IN
-<span class="token punctuation">(</span>SELECT EmplID
-FROM Employee
-WHERE EmplName<span class="token operator">=</span><span class="token string">'孙勇诚'</span>
-<span class="token punctuation">)</span></code></pre>
-<p>2、查询比所有D001部门员工年龄都大的员工号和出生日期。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT EmplID <span class="token keyword">as</span> <span class="token string">'员工号'</span>，Birthday AS <span class="token string">'出生日期'</span>
-FROM Employee
-WHERE Birthday<span class="token operator">&lt;</span>ALL
-  <span class="token punctuation">(</span> SElECT Birthday
-    FROM Employee
-    WHERE DeptID<span class="token operator">=</span><span class="token string">'D001'</span>
-   <span class="token punctuation">)</span></code></pre>
-<p>3、查询人事部门员工信息。（用EXISTS实现）</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT <span class="token operator">*</span>
-FROM Employee
-WHERE EXISTS
-  <span class="token punctuation">(</span> SELECT <span class="token operator">*</span>
-    FROM Department 
-    WHERE Employee<span class="token punctuation">.</span>DeptID<span class="token operator">=</span>Department<span class="token punctuation">.</span>DeptID AND DeptName<span class="token operator">=</span><span class="token string">'人事部'</span>   
-   <span class="token punctuation">)</span></code></pre>
-<p>4、查询部门号为D001和D002的员工信息。（用UNION实现）</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT <span class="token operator">*</span>
-FROM Employee
-WHERE DeptID<span class="token operator">=</span><span class="token string">'D001'</span>
-UNION
+<h1 id="一、索引的使用"><a href="#一、索引的使用" class="headerlink" title="一、索引的使用"></a>一、索引的使用</h1><p>1、对Employee中的姓名列建立非聚集索引Employee_name。</p>
+<pre class=" language-javascript"><code class="language-javascript">CREATE INDEX Employee_name ON <span class="token function">Employee</span><span class="token punctuation">(</span>EmplName<span class="token punctuation">)</span></code></pre>
+<p>2、对SalesOrder中的订单号和员工号建立唯一聚集索引。</p>
+<pre class=" language-javascript"><code class="language-javascript">CREATE UNIQUE CLUSTERED INDEX abc ON dbo<span class="token punctuation">.</span><span class="token function">SalesOrder</span><span class="token punctuation">(</span>OrderID<span class="token punctuation">,</span>EmplID<span class="token punctuation">)</span></code></pre>
+<p>3、删除Employee中的索引Employee_name。</p>
+<pre class=" language-javascript"><code class="language-javascript">DROP INDEX dbo<span class="token punctuation">.</span>Employee<span class="token punctuation">.</span>Employee_name</code></pre>
+<h1 id="二、创建视图"><a href="#二、创建视图" class="headerlink" title="二、创建视图"></a>二、创建视图</h1><p>1、创建StoreSales数据库上的视图Emp_view，视图包含Employee表的全部列。</p>
+<pre class=" language-javascript"><code class="language-javascript">CREATE VIEW Emp_view
+AS
 SELECT <span class="token operator">*</span>
-FROM Employee
-WHERE DeptID<span class="token operator">=</span><span class="token string">'D002'</span></code></pre>
-<p>5、查询工资大于4000但小于5000员工的信息。（用EXCEPT实现）</p>
-<pre class=" language-javascript"><code class="language-javascript">select<span class="token operator">*</span>
- <span class="token keyword">from</span> Employee
- where Wages<span class="token operator">></span><span class="token number">4000</span>
- EXCEPT
- select<span class="token operator">*</span>
- <span class="token keyword">from</span> Employee
- where Wages<span class="token operator">>=</span><span class="token number">5000</span></code></pre>
-<p>6、查询部门号为D001且性别为男的员工信息。（用INTERSECT实现）</p>
-<pre class=" language-javascript"><code class="language-javascript">select <span class="token operator">*</span>
- <span class="token keyword">from</span> Employee
- where DeptID<span class="token operator">=</span><span class="token string">'D001'</span>
- INTERSECT
- select <span class="token operator">*</span>
- <span class="token keyword">from</span> Employee
- where  Sex<span class="token operator">=</span><span class="token string">'男'</span></code></pre>
-<p>7、创建表Emp_Dep,包括员工号、姓名、工资、部门名称。（用INTO实现）</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT EmplID<span class="token punctuation">,</span> EmplName<span class="token punctuation">,</span> Wages<span class="token punctuation">,</span> DeptName INTO Emp_Dep
- FROM Employee<span class="token punctuation">,</span>Department</code></pre>
-<p>8、查询员工工资为前两名的员工信息。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT TOP <span class="token number">2</span> <span class="token operator">*</span>
-FROM Employee
-ORDER BY Wages DESC</code></pre>
+FROM Employee</code></pre>
+<p>2、创建StoreSales数据库上的视图EmpDep_view，视图包含员工号、员工姓名、部门号和部门名称。</p>
+<pre class=" language-javascript"><code class="language-javascript">CREATE VIEW EmpDep_view
+AS
+SELECT EmplID<span class="token punctuation">,</span>EmplName<span class="token punctuation">,</span>Employee<span class="token punctuation">.</span>DeptID<span class="token punctuation">,</span>DeptName
+FROM Employee<span class="token punctuation">,</span>Department
+WHERE Employee<span class="token punctuation">.</span>DeptID <span class="token operator">=</span>Department<span class="token punctuation">.</span>DeptID</code></pre>
+<h1 id="三、查询视图"><a href="#三、查询视图" class="headerlink" title="三、查询视图"></a>三、查询视图</h1><p>1、从视图Emp_view查询年龄大于40的员工的员工号、姓名和年龄。</p>
+<pre class=" language-javascript"><code class="language-javascript">SELECT EmplID<span class="token punctuation">,</span>EmplName<span class="token punctuation">,</span><span class="token number">2020</span><span class="token operator">-</span><span class="token function">year</span><span class="token punctuation">(</span>birthday<span class="token punctuation">)</span> <span class="token keyword">as</span><span class="token string">'Age'</span>
+FROM dbo<span class="token punctuation">.</span>Emp_view
+WHERE <span class="token number">2020</span><span class="token operator">-</span><span class="token function">year</span><span class="token punctuation">(</span>birthday<span class="token punctuation">)</span><span class="token operator">></span><span class="token number">40</span></code></pre>
+<p>2、从视图EmpDep_view中查询姓名为刘强的员工号及所在部门的名称。</p>
+<pre class=" language-javascript"><code class="language-javascript">SELECT EmplID<span class="token punctuation">,</span>DeptName
+FROM EmpDep_view
+WHERE EmplName<span class="token operator">=</span><span class="token string">'刘强'</span></code></pre>
+<h1 id="四、更新视图"><a href="#四、更新视图" class="headerlink" title="四、更新视图"></a>四、更新视图</h1><p>1、向视图Emp_view中插入一行数据“E007，张三，男，1996-3-6，5000，D002”。</p>
+<pre class=" language-javascript"><code class="language-javascript">INSERT INTO Emp_view <span class="token function">VALUES</span><span class="token punctuation">(</span><span class="token string">'E007'</span><span class="token punctuation">,</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">,</span><span class="token string">'1996-3-6'</span><span class="token punctuation">,</span><span class="token string">'地址'</span><span class="token punctuation">,</span><span class="token string">'5000'</span><span class="token punctuation">,</span><span class="token string">'D002'</span><span class="token punctuation">)</span></code></pre>
+<p>2、修改视图Emp_view，将员工张三的工资改为6000,部门号改为D001。</p>
+<pre class=" language-javascript"><code class="language-javascript">UPDATE Emp_view SET Wages<span class="token operator">=</span><span class="token number">6000</span><span class="token punctuation">,</span>DeptID<span class="token operator">=</span><span class="token string">'D001'</span>
+WHERE EmplName<span class="token operator">=</span><span class="token string">'张三'</span></code></pre>
+<p>3、删除视图Emp_view中张三这名员工的相关信息。</p>
+<pre class=" language-javascript"><code class="language-javascript">DELETE FROM Emp_view
+WHERE EmplName<span class="token operator">=</span><span class="token string">'张三'</span></code></pre>
+<h1 id="五、删除视图"><a href="#五、删除视图" class="headerlink" title="五、删除视图"></a>五、删除视图</h1><p>删除视图Emp_view和EmpDep_view</p>
+<pre class=" language-javascript"><code class="language-javascript">DROP VIEW Emp_view<span class="token punctuation">,</span>EmpDep_view</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -740,7 +711,7 @@ ORDER BY Wages DESC</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://shuaichaochaoi.github.io/2020/10/19/sql-sever-shi-yan-wu-shu-ju-cha-xun-er/">http://shuaichaochaoi.github.io/2020/10/19/sql-sever-shi-yan-wu-shu-ju-cha-xun-er/</a>
+                    <a href="http://shuaichaochaoi.github.io/2020/10/20/sql-server-shi-yan-liu-suo-yin-he-shi-tu/">http://shuaichaochaoi.github.io/2020/10/20/sql-server-shi-yan-liu-suo-yin-he-shi-tu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -778,8 +749,8 @@ ORDER BY Wages DESC</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SQL-Sever/">
-                                    <span class="chip bg-color">SQL Sever</span>
+                                <a href="/tags/SQL-Server/">
+                                    <span class="chip bg-color">SQL Server</span>
                                 </a>
                             
                         </div>
@@ -824,7 +795,7 @@ ORDER BY Wages DESC</code></pre>
         repo: 'gitalk',
         owner: 'shuaichaochaoi',
         admin: "shuaichaochaoi",
-        id: '2020-10-19T19-35-31',
+        id: '2020-10-20T21-03-04',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -853,7 +824,52 @@ ORDER BY Wages DESC</code></pre>
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/10/19/sql-sever-shi-yan-wu-shu-ju-cha-xun-er/">
+                <a href="/2020/10/20/sql-server-shi-yan-liu-suo-yin-he-shi-tu/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/banner/5.jpg" class="responsive-img" alt="SQL Server 实验六  索引和视图">
+                        
+                        <span class="card-title">SQL Server 实验六  索引和视图</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            帅超超i
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/SQL-Server/">
+                        <span class="chip bg-color">SQL Server</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/19/sql-server-shi-yan-wu-shu-ju-cha-xun-er/">
                     <div class="card-image">
                         
                         <img src="/medias/banner/11.jpg" class="responsive-img" alt="SQL Server实验五 数据查询（二）">
@@ -879,56 +895,11 @@ ORDER BY Wages DESC</code></pre>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL-Sever/">
-                        <span class="chip bg-color">SQL Sever</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/10/19/sql-sever-shi-yan-si-shu-ju-cha-xun-yi/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/banner/3.jpg" class="responsive-img" alt="SQL Server实验四 数据查询（一）">
-                        
-                        <span class="card-title">SQL Server实验四 数据查询（一）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            帅超超i
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/SQL-Sever/">
-                        <span class="chip bg-color">SQL Sever</span>
+                    <a href="/tags/SQL-Server/">
+                        <span class="chip bg-color">SQL Server</span>
                     </a>
                     
                 </div>
@@ -1135,7 +1106,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.1k</span>&nbsp;字
+                class="white-color">2.5k</span>&nbsp;字
             
             
             

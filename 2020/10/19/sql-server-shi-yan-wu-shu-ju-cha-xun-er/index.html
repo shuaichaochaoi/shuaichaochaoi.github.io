@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SQL Server实验四 数据查询（一）, HTML, CSS, JavaScript, JQuery, React, Vue.js">
+    <meta name="keywords" content="SQL Server实验五 数据查询（二）, HTML, CSS, JavaScript, JQuery, React, Vue.js">
     <meta name="description" content="记录知识，记录成长。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SQL Server实验四 数据查询（一） | chaochao&#39;blog</title>
+    <title>SQL Server实验五 数据查询（二） | chaochao&#39;blog</title>
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/shuaichaochaoi/shuaichaochaoi.github.io/medias/KDQS.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shuaichaochaoi/shuaichaochaoi.github.io/libs/awesome/css/all.css">
@@ -456,12 +456,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SQL Server实验四 数据查询（一）</h1>
+                    <h1 class="description center-align post-title">SQL Server实验五 数据查询（二）</h1>
                 </div>
             </div>
         </div>
@@ -578,8 +578,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SQL-Sever/">
-                                <span class="chip bg-color">SQL Sever</span>
+                            <a href="/tags/SQL-Server/">
+                                <span class="chip bg-color">SQL Server</span>
                             </a>
                         
                     </div>
@@ -601,21 +601,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-19
+                    2020-10-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    679
+                    425
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -630,87 +630,73 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本实验基于StoreSales数据库中的各个表，用T-SQL命令按要求完成下列查询。<br>1、查询Employee中所有员工的员工号、姓名、地址和部门号。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT EmplID<span class="token punctuation">,</span>EmplName<span class="token punctuation">,</span>Address<span class="token punctuation">,</span> DeptID
-FROM Employee</code></pre>
-<p>2、查询SalesOrder中所有订单的信息。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT <span class="token operator">*</span>
-FROM SalesOrder</code></pre>
-<p>3、查询Employee中包含的部门号（结果去掉重复值）。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT DISTINCT DeptID
-FROM Employee</code></pre>
-<p>4、查询SalesOrder中的订单号和员工号，将结果中各列的标题分别修改”订单号：和员工号：”。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT OrderID AS <span class="token string">'订单号'</span><span class="token punctuation">,</span>EmplID AS <span class="token string">'员工号'</span>
-FROM SalesOrder</code></pre>
-<p>5、查询Employee中月工资在3000元至4000元之间的员工的员工号、姓名和工资。（两种方法实现）</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT EmplID<span class="token punctuation">,</span>EmplName<span class="token punctuation">,</span>Wages
-FROM Employee
-WHERE Wages<span class="token operator">>=</span><span class="token number">3000</span> AND Wages<span class="token operator">&lt;=</span><span class="token number">4000</span>
-<span class="token comment" spellcheck="true">//另一种方法</span>
-SELECT EmplID<span class="token punctuation">,</span>EmplName<span class="token punctuation">,</span>Wages
-FROM Employee
-WHERE Wages between <span class="token number">3000</span> AND <span class="token number">4000</span></code></pre>
-<p>6、查询Employee中月工资大于5000元或性别为男的员工信息。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT <span class="token operator">*</span>
-FROM Employee
-WHERE Wages<span class="token operator">&lt;</span><span class="token string">'5000'</span> OR Sex<span class="token operator">=</span><span class="token string">'男'</span> </code></pre>
-<p>7、查询OrderDetail中总价不在10000和20000之间的订单号、商品号和总价。（两种方法实现）</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT OrderID<span class="token punctuation">,</span>GoodsID<span class="token punctuation">,</span>Total
-FROM OrdertDetail
-WHERE Total NOT BETWEEN <span class="token number">10000</span> AND <span class="token number">20000</span>
-<span class="token comment" spellcheck="true">//另一种方法</span>
-SELECT OrderID<span class="token punctuation">,</span>GoodsID<span class="token punctuation">,</span>Total
-FROM OrdertDetail
-WHERE Total<span class="token operator">&lt;</span><span class="token number">10000</span> or Total<span class="token operator">></span><span class="token number">20000</span></code></pre>
-<p>8、查询SalesOrder中订单号为S00001和S00002的订单信息。（两种方法实现）</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT <span class="token operator">*</span>
+                <blockquote>
+<p>本实验基于StoreSales数据库中的各个表，用T-SQL命令按要求完成下列查询。</p>
+</blockquote>
+<p>1、查询员工孙勇诚订单总金额。（三种方法可选择：谓词连接、JOIN连接、IN子查询）</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//谓词连接查询</span>
+SELECT Cost <span class="token keyword">as</span> <span class="token string">'总金额'</span>
+FROM Employee<span class="token punctuation">,</span>SalesOrder
+WHERE Employee<span class="token punctuation">.</span> EmplName<span class="token operator">=</span><span class="token string">'孙勇诚'</span> and Employee<span class="token punctuation">.</span>EmplID<span class="token operator">=</span>SalesOrder<span class="token punctuation">.</span>EmplID
+<span class="token comment" spellcheck="true">//JOIN连接查询</span>
+SELECT Cost <span class="token keyword">as</span> <span class="token string">'总金额'</span>
+FROM Employee join SalesOrder
+ON Employee<span class="token punctuation">.</span>EmplName<span class="token operator">=</span><span class="token string">'孙勇诚'</span> and Employee<span class="token punctuation">.</span>EmplID<span class="token operator">=</span>SalesOrder<span class="token punctuation">.</span>EmplID
+<span class="token comment" spellcheck="true">//IN子查询</span>
+SELECT Cost <span class="token keyword">as</span> <span class="token string">'总金额'</span>
 FROM SalesOrder
-WHERE OrderID IN <span class="token punctuation">(</span><span class="token string">'s00001'</span><span class="token punctuation">,</span><span class="token string">'s000002'</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">//另一种方法</span>
-SELECT <span class="token operator">*</span>
-FROM SalesOrder
-WHERE OrderID<span class="token operator">=</span><span class="token string">'s00001'</span> or OrderID<span class="token operator">=</span><span class="token string">'s00002'</span></code></pre>
-<p>9、查询Employee中姓名以李开头且为2个字符的员工的员工号和姓名。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT EmplID<span class="token punctuation">,</span>EmplName
+WHERE EmplID IN
+<span class="token punctuation">(</span>SELECT EmplID
 FROM Employee
-WHERE EmplNAme LIKE <span class="token string">'李%'</span></code></pre>
-<p>10、查询Employee中地址不为空的员工信息。</p>
+WHERE EmplName<span class="token operator">=</span><span class="token string">'孙勇诚'</span>
+<span class="token punctuation">)</span></code></pre>
+<p>2、查询比所有D001部门员工年龄都大的员工号和出生日期。</p>
+<pre class=" language-javascript"><code class="language-javascript">SELECT EmplID <span class="token keyword">as</span> <span class="token string">'员工号'</span>，Birthday AS <span class="token string">'出生日期'</span>
+FROM Employee
+WHERE Birthday<span class="token operator">&lt;</span>ALL
+  <span class="token punctuation">(</span> SElECT Birthday
+    FROM Employee
+    WHERE DeptID<span class="token operator">=</span><span class="token string">'D001'</span>
+   <span class="token punctuation">)</span></code></pre>
+<p>3、查询人事部门员工信息。（用EXISTS实现）</p>
 <pre class=" language-javascript"><code class="language-javascript">SELECT <span class="token operator">*</span>
 FROM Employee
-WHERE Address IS NOT NULL</code></pre>
-<p>11、查询OrderDetail中所有订单信息，并按销售单价降序排列，总价升序排列。</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//按销售单价降序排列</span>
+WHERE EXISTS
+  <span class="token punctuation">(</span> SELECT <span class="token operator">*</span>
+    FROM Department 
+    WHERE Employee<span class="token punctuation">.</span>DeptID<span class="token operator">=</span>Department<span class="token punctuation">.</span>DeptID AND DeptName<span class="token operator">=</span><span class="token string">'人事部'</span>   
+   <span class="token punctuation">)</span></code></pre>
+<p>4、查询部门号为D001和D002的员工信息。（用UNION实现）</p>
+<pre class=" language-javascript"><code class="language-javascript">SELECT <span class="token operator">*</span>
+FROM Employee
+WHERE DeptID<span class="token operator">=</span><span class="token string">'D001'</span>
+UNION
 SELECT <span class="token operator">*</span>
-FROM OrderDetall
-ORDER BY SaleUnitPrice DESC
-<span class="token comment" spellcheck="true">//按总价升序排列</span>
-SELECT <span class="token operator">*</span>
-FROM OrderDetall
-ORDER BY Total</code></pre>
-<p>12、查询男员工的最高工资、最低工资。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT <span class="token function">max</span><span class="token punctuation">(</span>Wages<span class="token punctuation">)</span><span class="token keyword">as</span><span class="token string">'最高工资'</span><span class="token function">，min</span><span class="token punctuation">(</span>Wages<span class="token punctuation">)</span><span class="token keyword">as</span><span class="token string">'最低工资'</span>
 FROM Employee
-WHERE Sex<span class="token operator">=</span><span class="token string">'男'</span> </code></pre>
-<p>13、查询所有员工的平均工资。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT <span class="token function">avg</span><span class="token punctuation">(</span>Wages<span class="token punctuation">)</span><span class="token keyword">as</span><span class="token string">'平均工资'</span>
-FROM Employee</code></pre>
-<p>14、查询部门号为D001的员工总人数。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token keyword">as</span><span class="token string">'人数'</span>
+WHERE DeptID<span class="token operator">=</span><span class="token string">'D002'</span></code></pre>
+<p>5、查询工资大于4000但小于5000员工的信息。（用EXCEPT实现）</p>
+<pre class=" language-javascript"><code class="language-javascript">select<span class="token operator">*</span>
+ <span class="token keyword">from</span> Employee
+ where Wages<span class="token operator">></span><span class="token number">4000</span>
+ EXCEPT
+ select<span class="token operator">*</span>
+ <span class="token keyword">from</span> Employee
+ where Wages<span class="token operator">>=</span><span class="token number">5000</span></code></pre>
+<p>6、查询部门号为D001且性别为男的员工信息。（用INTERSECT实现）</p>
+<pre class=" language-javascript"><code class="language-javascript">select <span class="token operator">*</span>
+ <span class="token keyword">from</span> Employee
+ where DeptID<span class="token operator">=</span><span class="token string">'D001'</span>
+ INTERSECT
+ select <span class="token operator">*</span>
+ <span class="token keyword">from</span> Employee
+ where  Sex<span class="token operator">=</span><span class="token string">'男'</span></code></pre>
+<p>7、创建表Emp_Dep,包括员工号、姓名、工资、部门名称。（用INTO实现）</p>
+<pre class=" language-javascript"><code class="language-javascript">SELECT EmplID<span class="token punctuation">,</span> EmplName<span class="token punctuation">,</span> Wages<span class="token punctuation">,</span> DeptName INTO Emp_Dep
+ FROM Employee<span class="token punctuation">,</span>Department</code></pre>
+<p>8、查询员工工资为前两名的员工信息。</p>
+<pre class=" language-javascript"><code class="language-javascript">SELECT TOP <span class="token number">2</span> <span class="token operator">*</span>
 FROM Employee
-WHERE DeptID<span class="token operator">=</span><span class="token string">'D001'</span></code></pre>
-<p>15、查询所有女员工工资总额。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT <span class="token function">sum</span><span class="token punctuation">(</span>Wages<span class="token punctuation">)</span><span class="token keyword">as</span><span class="token string">'工资总额'</span>
-FROM Employee
-WHERE Sex<span class="token operator">=</span><span class="token string">'男'</span></code></pre>
-<p>16、查询Employee中每个部门的人数。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT DeptID <span class="token keyword">as</span><span class="token string">'部门号'</span><span class="token function">，count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token keyword">as</span><span class="token string">'人数'</span>
-FROM Employee
-GROUP BY DeptID</code></pre>
-<p>17、查询查询男女员工的平均工资，并输出平均工资大于400的信息。</p>
-<pre class=" language-javascript"><code class="language-javascript">SELECT Sex<span class="token punctuation">,</span><span class="token function">AVG</span><span class="token punctuation">(</span>Wages<span class="token punctuation">)</span><span class="token keyword">as</span><span class="token string">'平均工资'</span>
-FROM Employee
-GROUP BY Sex
-HAVING <span class="token function">AVG</span><span class="token punctuation">(</span>Wages<span class="token punctuation">)</span><span class="token operator">></span><span class="token number">4000</span></code></pre>
+ORDER BY Wages DESC</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -754,7 +740,7 @@ HAVING <span class="token function">AVG</span><span class="token punctuation">(<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://shuaichaochaoi.github.io/2020/10/19/sql-sever-shi-yan-si-shu-ju-cha-xun-yi/">http://shuaichaochaoi.github.io/2020/10/19/sql-sever-shi-yan-si-shu-ju-cha-xun-yi/</a>
+                    <a href="http://shuaichaochaoi.github.io/2020/10/19/sql-server-shi-yan-wu-shu-ju-cha-xun-er/">http://shuaichaochaoi.github.io/2020/10/19/sql-server-shi-yan-wu-shu-ju-cha-xun-er/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -792,8 +778,8 @@ HAVING <span class="token function">AVG</span><span class="token punctuation">(<
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SQL-Sever/">
-                                    <span class="chip bg-color">SQL Sever</span>
+                                <a href="/tags/SQL-Server/">
+                                    <span class="chip bg-color">SQL Server</span>
                                 </a>
                             
                         </div>
@@ -838,7 +824,7 @@ HAVING <span class="token function">AVG</span><span class="token punctuation">(<
         repo: 'gitalk',
         owner: 'shuaichaochaoi',
         admin: "shuaichaochaoi",
-        id: '2020-10-19T19-27-24',
+        id: '2020-10-19T19-35-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -866,12 +852,12 @@ HAVING <span class="token function">AVG</span><span class="token punctuation">(<
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/10/19/sql-sever-shi-yan-wu-shu-ju-cha-xun-er/">
+                <a href="/2020/10/20/sql-server-shi-yan-liu-suo-yin-he-shi-tu/">
                     <div class="card-image">
                         
-                        <img src="/medias/banner/11.jpg" class="responsive-img" alt="SQL Server实验五 数据查询（二）">
+                        <img src="/medias/banner/5.jpg" class="responsive-img" alt="SQL Server 实验六  索引和视图">
                         
-                        <span class="card-title">SQL Server实验五 数据查询（二）</span>
+                        <span class="card-title">SQL Server 实验六  索引和视图</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -882,7 +868,7 @@ HAVING <span class="token function">AVG</span><span class="token punctuation">(<
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-19
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-20
                         </span>
                         <span class="publish-author">
                             
@@ -895,8 +881,8 @@ HAVING <span class="token function">AVG</span><span class="token punctuation">(<
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL-Sever/">
-                        <span class="chip bg-color">SQL Sever</span>
+                    <a href="/tags/SQL-Server/">
+                        <span class="chip bg-color">SQL Server</span>
                     </a>
                     
                 </div>
@@ -910,12 +896,12 @@ HAVING <span class="token function">AVG</span><span class="token punctuation">(<
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/27/sql-server-ji-ben-de-dai-ma-cao-zuo/">
+                <a href="/2020/10/19/sql-server-shi-yan-si-shu-ju-cha-xun-yi/">
                     <div class="card-image">
                         
-                        <img src="/medias/banner/1.jpg" class="responsive-img" alt="SQL Server基本的代码操作">
+                        <img src="/medias/banner/3.jpg" class="responsive-img" alt="SQL Server实验四 数据查询（一）">
                         
-                        <span class="card-title">SQL Server基本的代码操作</span>
+                        <span class="card-title">SQL Server实验四 数据查询（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -926,7 +912,7 @@ HAVING <span class="token function">AVG</span><span class="token punctuation">(<
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-19
                             </span>
                         <span class="publish-author">
                             
@@ -939,8 +925,8 @@ HAVING <span class="token function">AVG</span><span class="token punctuation">(<
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL-Sever/">
-                        <span class="chip bg-color">SQL Sever</span>
+                    <a href="/tags/SQL-Server/">
+                        <span class="chip bg-color">SQL Server</span>
                     </a>
                     
                 </div>
@@ -1147,7 +1133,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.1k</span>&nbsp;字
+                class="white-color">2.5k</span>&nbsp;字
             
             
             
