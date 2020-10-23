@@ -6,7 +6,7 @@
   <link href="http://shuaichaochaoi.github.io/atom.xml" rel="self"/>
   
   <link href="http://shuaichaochaoi.github.io/"/>
-  <updated>2020-10-20T13:04:40.810Z</updated>
+  <updated>2020-10-23T09:55:20.618Z</updated>
   <id>http://shuaichaochaoi.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQL Server 实验七 数据完整性及数据库程序设计</title>
+    <link href="http://shuaichaochaoi.github.io/2020/10/23/sql-server-shi-yan-qi-shu-ju-wan-zheng-xing-ji-shu-ju-ku-cheng-xu-she-ji/"/>
+    <id>http://shuaichaochaoi.github.io/2020/10/23/sql-server-shi-yan-qi-shu-ju-wan-zheng-xing-ji-shu-ju-ku-cheng-xu-she-ji/</id>
+    <published>2020-10-23T09:55:13.000Z</published>
+    <updated>2020-10-23T09:55:20.618Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;用T-SQL命令完成下面要求。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1.自建数据库，在数据库中创建一个stu(sno,sname,ssex,sdept,sage)表，通过constraint关键词为列添加约束条件，其中：sno为主键，ssex</summary>
+        
+      
+    
+    
+    
+    
+    <category term="SQL Server" scheme="http://shuaichaochaoi.github.io/tags/SQL-Server/"/>
+    
+  </entry>
   
   <entry>
     <title>SQL Server 实验六  索引和视图</title>
