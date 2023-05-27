@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>choachao blog</title>
+  
+  
+  <link href="http://qianmingchao.top/atom.xml" rel="self"/>
+  
+  <link href="http://qianmingchao.top/"/>
+  <updated>2023-05-27T07:09:38.082Z</updated>
+  <id>http://qianmingchao.top/</id>
+  
+  <author>
+    <name>chaochao</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的第一篇博客</title>
+    <link href="http://qianmingchao.top/2023/05/26/wo-de-di-yi-pian-bo-ke/"/>
+    <id>http://qianmingchao.top/2023/05/26/wo-de-di-yi-pian-bo-ke/</id>
+    <published>2023-05-26T13:46:54.069Z</published>
+    <updated>2023-05-27T07:09:38.082Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;你好。&lt;/p&gt;
+&lt;div class=&quot;note icon-padding disabled&quot;&gt;&lt;i class=&quot;note-icon fab fa-cc-visa&quot;&gt;&lt;/i&gt;&lt;p&gt;你是刷 Visa 还是 UnionPay&lt;/p&gt;
+&lt;/div&gt;
+&lt;div</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://qianmingchao.top/2023/05/25/hello-world/"/>
+    <id>http://qianmingchao.top/2023/05/25/hello-world/</id>
+    <published>2023-05-25T11:57:31.965Z</published>
+    <updated>2023-05-25T11:48:52.639Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
